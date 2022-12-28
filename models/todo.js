@@ -1,4 +1,35 @@
-// models/todo.js
+//models/todo.js
+/*const { connect } = require("./connectdb.js");
+const Todo = require("./TodoModel.js");
+const createTodo = async () => {
+  try {
+    await connect();
+    const todo = await Todo.addTask({
+      title: "Second Item",
+      Duedate: new Date(),
+      completed: false,
+    });
+    console.log(`Created Todo With ID: $todo.id`);
+
+  }
+  catch (error) {
+    console.log((error));
+  }
+  
+};
+const countItems = async () => {
+  try {
+    const countItems = await Todo.count();
+    console.log(`found ${totalcount}itmes in the table `)
+  }
+  catch (error){
+    
+  }
+}
+(async () => {
+  await createTodo();
+})();
+*/
 "use strict";
 const { Model, Op } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
@@ -100,5 +131,5 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Todo",
     }
   );
-   return Todo;
+  return Todo;
 };
